@@ -14,7 +14,7 @@ def getGif(search_term):
     # load the GIFs using the urls for the smaller GIF sizes
     top_8gifs = json.loads(r.content)
     selection = random.randint(0,len(top_8gifs['results'])-1)
-    return top_8gifs['results'][selection]['url']
+    return top_8gifs['results'][selection]['media_formats']['gif']['url']
   else:
     top_8gifs = None
 
